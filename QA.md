@@ -1,26 +1,26 @@
-# QA status
+# Hollow Sun — QA and player acceptance checks
 
-The current two-area demo is packaged for Vercel. This export is not a live deployment.
+## Changes under test
+- Ordinary dialogue and investigation do not advance combat or cause enemy return fire.
+- Persuasion uses Presence. Failure does not trigger a combat roll or retaliatory attack.
+- Questions, refusals and hypothetical dialogue mentioning violence are protected from being treated as attacks.
+- Valid physical attacks still use Combat and allow enemy retaliation. Invalid or out-of-range attacks do not roll.
+- Checks with guaranteed code access, completed recruitment and other resolved interactions avoid unnecessary dice.
+- Player skill and attack checks have a centred animated d20, bonus, difficulty and success/failure display. The overlay shows the engine’s existing result and waits for Continue. Space reveals, then continues. Reduced-motion settings disable tumbling.
+- NPC conversations outside combat use large portraits, a location backdrop, a wide current-dialogue panel, separate history, suggested replies and free-text input.
 
-## Passed
+## Verified
+19 automated checks passed: seven focused conversation/combat scenarios and twelve existing game scenarios, including peaceful and combat campaign completion, save validation, species bonuses, movement and proximity.
 
-- Local Vercel-edition production smoke test: page returns 200, configuration returns no key, cross-origin AI requests return 403 and missing-key requests return 401.
+Browser acceptance walkthrough passed at the current desktop viewport: character creation, tutorial progression, walking to Nyx, ordinary dialogue without a check, recruiting Nyx with a centred Presence roll, continuing to apply the result, opening separate dialogue history, returning to the conversation and closing to explore. The portrait layout and dice result were visually inspected.
 
-- Production builds for the original preview and the standard Next.js Vercel export.
-- Next.js compilation and TypeScript checks.
-- Twelve deterministic gameplay checks: reachable interactions, map boundaries, proximity enforcement, diplomatic ending, access-code route, complete boss combat route, duplicate reward prevention, healing/inventory limits, endgame gating, save validation, species stats/health/rolls and opening attack ranges.
-- Palette checks: clothing pixels change; human skin, violet skin and head regions are excluded from recolouring.
-- Redis adapter tests with mocked responses: permitted request, exhausted quota, absent configuration and invalid/error response. Failure closes access to shared AI.
-- Browser inspection of creator ordering, species lore, background detail, gender-linked portraits and clothing-only olive palette. Dialogue-history navigation and cutscene transitions checked during this session.
-- Dependency audit: zero reported vulnerabilities after upgrading the export to Next.js 16.3.4.
+Browser combat check also passed: attacking Korr opened a Combat roll and caused enemy retaliation; then saying “Hello” produced standard dialogue with no dice overlay, no additional enemy attacks, health unchanged at 22/36 and round unchanged at 2. The final Vercel production build passed. Deployment source copies match the tested source.
 
-## Limits and outstanding work
+## Remaining acceptance coverage
+These are developer-run acceptance checks, not colleague sign-off. Mobile devices, multiple browsers, reduced-motion playback and live AI interpretation of every possible free-text phrase have not been exhaustively tested. Speech playback was outside this pass.
 
-- The game still begins on the concourse. The requested ship start and additional market area were blocked by automatic approval review reporting the Codex usage limit. Concept artwork exists separately; it is not wired into the game.
-- Species prejudice is supplied to the AI as setting context. It has not been verified with a live AI playthrough of every species/gender combination. Rules-mode first greetings also vary by identity and stats.
-- Shared AI on Vercel needs the owner's OpenAI and Redis environment variables. No real Vercel deployment or live Redis connection was available for this QA pass.
-- Diagonal controls were changed to held-key movement; an exhaustive hands-on keyboard and mobile-device pass remains outstanding.
-- Earlier live OpenAI plan/narration checks passed, but final identity-conditioned dialogue has not been tested against the live service.
-- Saves remain browser-local and do not transfer between localhost and the production domain.
+Suggested colleague retest: talk to Korr during combat and confirm health and round remain unchanged; attempt persuasion and confirm only Presence is shown; attack and confirm a Combat roll followed by enemy retaliation; check both successful and failed dice results; read long NPC dialogue and return from history.
 
-Do not interpret this report as completion of the blocked map expansion or an exhaustive end-to-end certification.
+
+## Transparent portrait update
+Conversation portraits now use real alpha cutouts extracted from the original atlases. Original RGB colours and image dimensions were verified unchanged. Proportional rendering and cell clipping prevent stretching or neighbouring-character bleed. Card borders and name ribbons were removed. The Nyx/player conversation was visually verified in the browser, and the Vercel production build passed.
