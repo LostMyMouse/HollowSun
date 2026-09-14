@@ -1,106 +1,47 @@
-# Hollow Sun: A Debt to the Stars
+# Hollow Sun — the demo story
 
-Spoilers: this outline covers the demo from its opening through all three endings. It describes the current story, with the planned ship opening identified separately.
+You arrive at Port Meridian in the Wayfarer, looking for fuel and repairs. Director Veyra’s Hollow Sun Syndicate controls the hangar and its guards. An urgent local transmission reaches your ship just after docking.
 
-## The premise
+Sol Renn, a survey courier, has found a key to a dormant network of jump gates. Veyra wants to use it to control the routes and charge passing ships. Her guards have locked Sol in a cargo vault. Sol has managed to send one message: find Nyx, a smuggler near the hangar cantina.
 
-Port Meridian keeps the outer trade lanes alive, but the Hollow Sun Syndicate controls its docks, debts and security. Its leader, Director Veyra, believes freedom is a luxury people cannot afford: someone must control the routes, enforce order and collect the price.
+## 1. Aboard the Wayfarer — playable tutorial
 
-A missing courier, Sol Renn, has discovered an artifact connected to ancient jump gates. In Veyra’s hands it could turn the sector’s freedom of movement into a permanent toll system. A distress transmission reaches the captain of the Wayfarer. The captain answers.
+After character creation, the player starts on the crew deck. They walk to the flashing comms console and play Sol’s message, then cross the deck to collect their field kit. An optional diagnostic console offers a safe Tech check: success repairs the sensor, while failure uses a manual release. Either outcome lets them continue. The boarding ramp leads into Meridian Hangar once they have heard the message and collected their kit.
 
-The story’s central question is whether defeating someone who controls others is enough—or whether you must also give up the power to replace them.
+This teaches movement, inspecting objects, reading dialogue, inventory changes, checks and travelling between maps through actions in the world. The ship remains available for rest and revisiting its consoles. Supplies are awarded only once.
 
-## 1. A voice in the dark
+## 2. Meridian Hangar — finding Sol
 
-The prologue establishes Meridian’s dependence on the syndicate. Sol’s interrupted message warns that Veyra knows what they found and asks for help. The Wayfarer approaches the station.
+Nyx confirms where Sol is being held. She may join the captain if persuaded. PIP-7 has a service-door code. Korr guards the vault but is uncomfortable about what he has been ordered to do. The player can talk him into leaving, use the service entrance, or fight the patrol.
 
-The player creates their captain. A drifter arrives without institutional loyalty. A former syndicate operative returns to a system they once served. A disgraced station officer carries a broken relationship with authority. These backgrounds provide motives and conversational context; the player decides the personal details.
+Brakk’s shop has a separate entrance from the hangar. The player walks into its interior and approaches his counter to trade. He sells medkits, weapon and armour upgrades, and tools that improve checks. His repair bench and conversation reveal how Veyra’s drones depend on the security uplink. The player can leave the shop and return to any unfinished lead.
 
-Species adds another layer. Human captains generally receive more institutional trust. Vaeli travellers encounter suspicion despite their respected navigation heritage. Cyborgs face assumptions that their bodies and maintenance belong to corporations. NPC attitudes vary, and the captain’s conduct matters.
+## 3. The rescue
 
-## 2. Arrival at Meridian
+Opening the vault frees Sol, who gives the captain the gate key and takes shelter aboard the Wayfarer. The player can prepare before confronting Veyra: recruit Nyx, gain Korr’s support, buy equipment, rest aboard the ship or sabotage the hangar’s security network.
 
-The personalised arrival cutscene connects the captain’s background to the mission. A player-paced tutorial presents Sol’s transmission, explains the gate key and introduces the main NPCs before teaching movement and dialogue. The immediate objective is simple: speak to Nyx near the cantina about Sol.
+## 4. Veyra’s throne room
 
-**Current implementation:** free movement begins on the docking concourse.
+The hangar lift leads to Veyra’s throne room above the reactor. The captain can fight her command rig, disable its relay, or try to negotiate. The lift remains available for a return to the hangar when out of combat.
 
-**Planned expansion, not yet playable:** begin aboard the Wayfarer, review Sol’s transmission with PIP, then walk down the boarding ramp into Meridian. Lantern Market would become a separate explorable area. These are additions to the opening and exploration, not a different plot.
+The surrender demand is specific: Veyra orders her guards to stand down and gives up the station in exchange for the captain preserving the gate key. She needs that key for her business. The engine requires the key, either Korr’s support or sabotage, and a successful Presence check. If the bargain fails, the player can prepare further or fight.
 
-## 3. Nyx reveals the stakes
+## 5. Three endings
 
-Nyx Vale, a guarded smuggler with unfinished business, reveals that Sol is alive and held in the cargo vault. Lieutenant Korr guards it. The artifact can open old jump gates, and Veyra wants to control travel throughout the sector.
+- **Destroy the key:** the old gates go dark. Veyra cannot own them, but the routes are lost.
+- **Take control:** the captain takes Veyra’s syndicate and its gate monopoly.
+- **Give the gates to the station:** Veyra is spared, stripped of command, and the station council takes control.
 
-The rescue is now more than a favour to a stranger. The player understands what the syndicate intends to gain.
+The rescue is the clearest route, but the demo allows players to confront Veyra earlier. That choice does not silently count as rescuing Sol.
 
-Nyx can become a companion if the captain earns her trust. She adds covering fire in combat and helps with stealth. Recruiting her is optional; she is not a compulsory party member or a prerequisite for finishing the demo.
+## Playable areas
 
-## 4. Explore and choose an approach
+**Wayfarer crew deck ↔ Meridian Hangar ↔ Veyra’s throne room**
 
-The player can follow different leads in any useful order:
+**Meridian Hangar ↔ Brakk’s Salvage**
 
-- **Brakk, the mechanic:** sells medkits, a weapon upgrade, armour and tools, and explains that Veyra’s command rig relies on external power and security support. Disabling the station terminal or the relay in her chamber can weaken her.
-- **PIP-7, the survey droid:** confirms Sol’s location and provides service access codes. These offer a way around security without winning a fight.
-- **Korr, the lieutenant:** appears to be another syndicate obstacle, but is troubled by the real nature of his assignment. He thought he was guarding cargo, not imprisoning a person.
-- **The Wayfarer:** provides a place to recover before trying another approach.
+The hangar and throne room use the established demo locations. The ship and shop are additional walkable interiors. The prologue can still be viewed from Help; the old four-page tutorial no longer interrupts a new game.
 
-These encounters establish the three broad methods available: understand people, exploit systems or use force. The captain can mix them rather than commit to a single route.
+## Dialogue direction
 
-## 5. Get into the cargo vault
-
-There are three main routes:
-
-**Persuasion:** convince Korr to stand down. He supplies the override, withdraws his patrol and becomes an ally whose testimony can later put pressure on Veyra.
-
-**Stealth and access codes:** use PIP’s information to bypass security. The player can get access without clearing the guards by force.
-
-**Combat:** defeat Korr and the syndicate patrol to obtain access.
-
-A failed roll does not end the story. The player can retry with another approach, seek help, prepare or recover after defeat.
-
-## 6. Rescue Sol and take responsibility
-
-Inside the vault, the captain finds Sol alive. Sol hands over the crystalline artifact and urges them not to let Veyra control the gates. The courier escapes aboard the Wayfarer.
-
-The captain now holds the thing everyone is fighting over. Their role changes from investigator to decision-maker. What began as a rescue becomes a question of who should control the sector’s future.
-
-This is the intended dramatic midpoint of the demo. The current sandbox also lets players rush toward Veyra before completing the rescue; the story does not force every beat into a fixed order.
-
-## 7. Prepare—or go straight to Veyra
-
-Before entering the reactor chamber, the captain can recruit Nyx, rest, turn Korr into an ally or disable the security uplink. Each can change the confrontation.
-
-Preparation is optional. The reactor lift is available early, so impatient or aggressive captains can reach the boss without following the full investigation. They can also return to the concourse to change their approach.
-
-## 8. Confront the syndicate leader
-
-Veyra waits in the Hollow Crown reactor chamber, surrounded by the machinery of her authority. She argues that control creates stability and that the station needs someone willing to impose it.
-
-**Fight:** defeat her command rig. Earlier sabotage reduces its strength; Nyx provides support if recruited. The relay can also be targeted in the chamber.
-
-**Negotiate:** demand that Veyra order her guards to stand down and surrender control of the station in exchange for keeping the gate key intact. She needs that key to monopolise travel and collect tolls; turning Korr or disabling her network makes taking it by force harder. The current rules require the artifact, a successful persuasion check, and either Korr’s support or sabotage of Veyra’s network. Words alone do not make her surrender.
-
-Victory breaks Veyra’s power, but it does not automatically determine the ending. She yields, and the captain must decide what to do with the artifact.
-
-## 9. Choose the ending
-
-### A Sky Without Masters — destroy the artifact
-
-The captain destroys the artifact. The old gates go dark, preventing anyone from monopolising them. Veyra is taken into custody. Meridian must build a future without that source of power.
-
-**Trade-off:** remove the means of control, but also lose what the gates could have offered.
-
-### The New Sun — claim the syndicate
-
-The captain takes the artifact and Veyra’s command seal. The syndicate has a new ruler. Nyx watches carefully: promising freedom was easier than handing over the power to make it real.
-
-**Trade-off:** control might let the captain impose change, but they have inherited the structure they came to oppose. The demo leaves their future rule unresolved.
-
-### An Open Horizon — give the gates to the station
-
-The captain removes Veyra from command, spares her life and places the gates in the station council’s hands. Ships begin leaving without owing the syndicate a debt.
-
-**Trade-off:** the captain relinquishes personal control and trusts the community to govern the power collectively.
-
-## Scope of this chapter
-
-This is a contained opening chapter with one central rescue, optional allies and preparation, one major confrontation and three endings. The AI improvises dialogue around the established game state; it does not yet generate new playable planets, additional campaigns or arbitrary quests. Further chapters could explore the consequences of the ending, but those continuations are not implemented.
+Nyx is direct and wary; Brakk explains machinery as someone who actually fixes it; PIP is literal without a joke attached to every line; Korr is concerned about his orders and his own safety; Veyra speaks as someone accustomed to getting a practical return on a deal. Most exchanges should answer one question in a few sentences. Facts and options belong in guidance or the journal when they would sound unnatural spoken aloud.

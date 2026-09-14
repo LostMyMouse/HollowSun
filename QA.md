@@ -1,26 +1,31 @@
 # Hollow Sun — QA and player acceptance checks
 
-## Changes under test
-- Ordinary dialogue and investigation do not advance combat or cause enemy return fire.
-- Persuasion uses Presence. Failure does not trigger a combat roll or retaliatory attack.
-- Questions, refusals and hypothetical dialogue mentioning violence are protected from being treated as attacks.
-- Valid physical attacks still use Combat and allow enemy retaliation. Invalid or out-of-range attacks do not roll.
-- Checks with guaranteed code access, completed recruitment and other resolved interactions avoid unnecessary dice.
-- Player skill and attack checks have a centred animated d20, bonus, difficulty and success/failure display. The overlay shows the engine’s existing result and waits for Continue. Space reveals, then continues. Reduced-motion settings disable tumbling.
-- NPC conversations outside combat use large portraits, a location backdrop, a wide current-dialogue panel, separate history, suggested replies and free-text input.
+Updated 14 September 2026.
 
-## Verified
-19 automated checks passed: seven focused conversation/combat scenarios and twelve existing game scenarios, including peaceful and combat campaign completion, save validation, species bonuses, movement and proximity.
+## Current update
+The opening is now a playable tutorial aboard the Wayfarer. Players walk to the comms console to receive Sol’s transmission, collect supplies and optionally practise a safe systems check before disembarking into Meridian Hangar. Brakk’s Salvage has its own explorable interior, and the hangar lift leads to Veyra’s Throne Room. Each area has its own interactables and return route.
 
-Browser acceptance walkthrough passed at the current desktop viewport: character creation, tutorial progression, walking to Nyx, ordinary dialogue without a check, recruiting Nyx with a centred Presence roll, continuing to apply the result, opening separate dialogue history, returning to the conversation and closing to explore. The portrait layout and dice result were visually inspected.
+Core NPC dialogue, backgrounds and arrivals were rewritten with shorter, more natural speech. AI narration instructions now favour concrete actions and character concerns. Existing immersion boundaries, authored responses for common dialogue, combat separation, transparent portraits and animated checks remain in place.
 
-Browser combat check also passed: attacking Korr opened a Combat roll and caused enemy retaliation; then saying “Hello” produced standard dialogue with no dice overlay, no additional enemy attacks, health unchanged at 22/36 and round unchanged at 2. The final Vercel production build passed. Deployment source copies match the tested source.
+## Automated verification
+- New-area checks passed: ship start, departure requirements, one-time supplies, harmless failed practice check, travel between all four areas, return routes, save validation and reachable interactables.
+- Twelve game checks passed: peaceful, code and combat routes; final boss resolution; movement boundaries and proximity; reward deduplication; healing limits; ending requirements; save validation; species modifiers; and attack range.
+- Seven conversation/combat checks passed: ordinary conversation and persuasion do not trigger attacks or advance combat, while valid attacks still resolve combat.
+- Guidance, shop and equipment checks passed, including purchasing, insufficient funds, ownership, medkit limits and actual equipment bonuses.
+- Immersion checks passed for six off-topic or instruction-changing inputs and eight valid roleplay inputs, plus generated-output checks.
+- Export checks passed for clothing colour isolation and mocked Redis quota handling, including missing configuration and storage failures.
+- Final Vercel production build passed, including TypeScript validation.
 
-## Remaining acceptance coverage
-These are developer-run acceptance checks, not colleague sign-off. Mobile devices, multiple browsers, reduced-motion playback and live AI interpretation of every possible free-text phrase have not been exhaustively tested. Speech playback was outside this pass.
+## Browser walkthrough
+A fresh captain began aboard the ship. Walking to the comms console played the transmission and advanced guidance. Collecting supplies increased medkits from three to four. The optional systems check displayed a centred Tech roll and completed without damage. The ramp led to Meridian Hangar.
 
-Suggested colleague retest: talk to Korr during combat and confirm health and round remain unchanged; attempt persuasion and confirm only Presence is shown; attack and confirm a Combat roll followed by enemy retaliation; check both successful and failed dice results; read long NPC dialogue and return from history.
+The shop entrance opened a separate map. Walking to Brakk opened trading. Buying a medkit reduced credits from 80 to 60 and increased medkits from four to five. Leaving through the door returned to the hangar with the purchase retained. The lift then opened Veyra’s Throne Room and its arrival dialogue.
 
+The ship and shop were visually inspected. A background scaling issue found during QA was corrected so their painted floors align with movement and interaction markers.
 
-## Transparent portrait update
-Conversation portraits now use real alpha cutouts extracted from the original atlases. Original RGB colours and image dimensions were verified unchanged. Proportional rendering and cell clipping prevent stretching or neighbouring-character bleed. Card borders and name ribbons were removed. The Nyx/player conversation was visually verified in the browser, and the Vercel production build passed.
+Earlier browser checks also verified conversation history, proportional transparent portraits, an off-topic redirect, and conversation during combat without extra damage or combat rounds.
+
+## Limits and colleague acceptance
+These are developer-run checks, not colleague sign-off. Live AI responses and voice playback were not retested in this pass. Mobile layouts, multiple browsers and every possible free-text input have not been exhaustively tested. AI boundaries reduce drift but cannot guarantee every response stays in-world.
+
+Recommended colleague retest: start a new captain, complete the ship tutorial without help, buy an item, return to the hangar and find the throne-room lift. Confirm Sol’s problem and Veyra’s demands are clear. Then try peaceful and combat approaches, including conversation during a fight.

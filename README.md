@@ -49,9 +49,9 @@ Use **AI voices** in the game header to enable optional OpenAI-generated speech.
 
 ## Tutorial and shop
 
-New captains receive a player-paced tutorial after the arrival cutscene: Sol’s transmission, the stakes, key characters and movement/dialogue controls. Replay it from How to play.
+New captains begin on the Wayfarer’s crew deck. Walk to comms to hear Sol, collect the field kit, optionally try a safe Tech check, then disembark through the boarding ramp. The ship stays accessible from the hangar.
 
-Use the shopping-bag button to walk to Brakk’s stall and open the shop. Purchases spend credits and apply immediately. Weapon upgrades improve ranged damage, armour improves defense, and tools improve Tech, Presence or Insight checks. Equipment is included in your manual save. The shop is a storefront screen on the concourse, not an additional walkable map.
+Use the shopping-bag button to find Brakk’s shop entrance. Inside, approach his counter to trade. Purchases spend credits and apply immediately. Weapon upgrades improve ranged damage, armour improves defense, and tools improve Tech, Presence or Insight checks. Equipment is included in your manual save. The shop is its own walkable map, with a counter, stock shelves, repair bench and a door back to the hangar.
 
 Read `STORY-BRIEF.md` for the one-page explanation and `STORY.md` for the longer outline and endings.
 
@@ -80,3 +80,11 @@ Standard replies retain authored story facts, identity reactions and determinist
 ## Conversation and dice presentation
 
 NPC conversations outside combat use a portrait-led scene and a wide dialogue panel. Close the conversation to explore. Skill checks and player attacks open a centred d20 result; Space reveals the roll and then continues. Normal questions have no dice overlay. Conversation and persuasion do not trigger enemy return fire or advance combat rounds. Valid attacks retain normal combat turns.
+
+## Immersion boundaries
+
+Common off-topic requests and instruction-changing attempts receive authored in-world redirects without AI dialogue calls or checks. Server-side instructions keep other requests grounded in the setting; obvious generated code or assistant disclosures fall back to the engine result. Creative roleplay, small talk, and fictional hacking remain supported. These are practical safeguards, not a guarantee against every possible adversarial phrase.
+
+## Current demo route
+
+New captains begin on the Wayfarer’s walkable crew deck. Play the message at comms, collect the field kit, optionally try the diagnostic check, and disembark. Meridian Hangar connects to a separate Brakk’s Salvage interior and the throne-room lift. All areas support return travel; the ship provides rest. Existing version-1 saves remain readable, including older station/arena saves. See STORY-BRIEF.md for the revised opening.
